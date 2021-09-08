@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    max-width: 1440px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+.location input{
+    background-color: #e6e6e6;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 9rem;
+}
+#search-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+
+}
