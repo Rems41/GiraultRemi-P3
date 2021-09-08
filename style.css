@@ -3,12 +3,19 @@ body{
     max-width: 1440px;
 }
 
+/* Header*/
+
 header{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 4rem;
 }
+
+/* Fin Header*/
+
+/* Search Block*/
+
 .location input{
     background-color: #e6e6e6;
     border: none;
@@ -59,4 +66,35 @@ header{
     align-items: center;
     border-radius: 2rem;
     width: 15rem;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Fin Search Block*/
+
+.functioning-list{
+    display: flex;
+    justify-content: space-evenly;
+}
+.functioning-step{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.functioning-step h3{
+    padding-left: 1.3rem;
+}
+.functioning-step i{
+    padding-left: 1.3rem;
+}
+.functioning-step{
+    background-color: #f2f2f2;
+    width: 17rem;
+    border-radius: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
