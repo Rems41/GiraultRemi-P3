@@ -16,6 +16,7 @@ header{
     font-size: 1rem;
     font-weight: bolder;
     width: 9rem;
+    padding-left: 0.6rem;
 }
 #search-block{
     display: flex;
@@ -27,6 +28,35 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4rem;
+    height: 3rem;
+    background-color: #e6e6e6;
+    width: 100%;
+    border-top: 0.3rem solid #dadada;
+}
+.exploration{
+    background-color: #f2f2f2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+.exploration h1{
+    margin-bottom: 0;
+}
+.exploration p{
+    margin-bottom: 2rem;
+}
+.btn{
+    color: #fff;
+    background: linear-gradient(0deg, #9356dc, #ff79da);
+    font-size: 1.2rem;
+    text-decoration: none;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    width: 15rem;
 }
