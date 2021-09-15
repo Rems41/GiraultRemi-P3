@@ -74,27 +74,158 @@ a{
 
 /* Fin Search Block*/
 
-.functioning-list{
+#functioning{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em 2em 0 2em;
+    margin-bottom: 2rem;
+}
+
+#functioning h2{
+    width: 100%;
+    color: #000;
+    font-size: 30px;
+}
+
+#functioning a{
+    display: flex;
+    align-items: center;
+    border: 1.2rem;
+    border-radius: 2rem;
+    background-color: #f7f7f7;
+    box-shadow: 0 5px 15px #00000033;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1em 0 0 0;
+    padding: 1.5em 5em;
+    transition: all .3s ease-in-out;
+    width: 18%;
+}
+
+.functioning-step span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#9356dc;
+    border-radius: 1.2rem;
+    color: #fff;
+    height: 1.5em;
+    padding: .3em;
+    position: relative;
+    right: 6em;
+    width: 1.5em;
+}
+
+.functioning-step i{
+    padding-right: 1.2rem;
+}
+
+.functioning-step h3{
+    font-weight: 300;
+}
+/* Partie : Restaurant*/
+
+#restaurants{
+    background-color: #f6f6f6;
+    padding: 1rem 1rem 2rem 0;
+}
+.restaurants-container{
+    max-width: 1280px;
+    margin: auto;
+}
+.title-restaurants{
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 40px;
+}
+.cards{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-.functioning-step{
+.card{
+    box-shadow: 0 5px 15px #00000033;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 1em 0;
+    max-width: 45%;
+    position: relative;
+    transition: all .3s ease-in-out;
+    width: 100%;
+}
+.card-img{
+    height: 12rem;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
+}
+.new-card{
+    background-color: #99e2d0;
+    color: #1b6150;
+    padding: .5rem;
+    position: absolute;
+    top: 1rem;
+    right: .75rem;
+}
+.restaurant-info{
+    padding: 1rem;
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
-.functioning-step h3{
-    padding-left: 1.3rem;
+.card-content{
+    flex: 1;
 }
-.functioning-step i{
-    padding-left: 1.3rem;
+.card-title{
+    margin: 0 0 .25rem;
 }
-.functioning-step{
-    background-color: #f2f2f2;
-    width: 17rem;
-    border-radius: 1.3rem;
+.card-district{
+    margin: 0;
+}
+.card-heart{
+    height: 2rem;
+    width: 2rem;
+    border: 0 solid transparent;
+    padding: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
 
+/* Fin Partie Restaurants*/
+
+/* Début Footer*/
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #353535;
+    flex-wrap: wrap;
+    padding: 2em;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.footer-logo img{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+    color: #fff;
+}
+
+.footer-link{
+    color: #fff;
+    height: 1.5em;
+}
+
+.footer-link i{
+    margin-right: .5em;
 }
