@@ -233,6 +233,7 @@ header {
 }
 
 /* Partie : Restaurant*/
+
 #restaurants {
   background-color: #f6f6f6;
   padding: 1rem 1rem 2rem 0;
@@ -294,8 +295,9 @@ header {
 }
 
 /* Partie : Restaurant infos*/
+
 .restaurant-info {
-  padding: 1rem;
+  padding: 0.6rem 1rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,6 +338,9 @@ header {
   cursor: pointer;
   position: relative;
 }
+.restaurant-info .card-heart i{
+  font-size: 1.6rem;
+}
 
 @media screen and (max-width:600px) {
   .cards{
@@ -351,6 +356,12 @@ header {
 }
 
 @media screen and (max-width:768px) {
+  .restaurants-container > h2{
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width:375px) {
   .restaurants-container > h2{
     margin-left: 0rem;
   }
@@ -604,5 +615,24 @@ header {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(77, 36, 128, 0.9)), to(rgba(255, 121, 218, 0.9)));
   background-image: linear-gradient(0deg, rgba(77, 36, 128, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
+}
+
+@media screen and (max-width:1000px) {
+  .footer{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer > .footer-logo{
+    padding-bottom: 1.5rem;
+  }
+  .footer a{
+    padding-bottom: 0.6rem;
+  }
+}
+
+@media screen and (max-width:3768px) {
+  .footer{
+    padding-left: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

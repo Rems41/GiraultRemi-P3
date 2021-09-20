@@ -213,7 +213,7 @@ header{
 /* Partie : Restaurant infos*/
 
 .restaurant-info{
-    padding: 1rem;
+    padding: 0.6rem 1rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -240,7 +240,11 @@ header{
         justify-content: center;
         cursor: pointer;
         position: relative;
-    }   
+    
+        & > i{
+            font-size: 1.6rem;
+        }
+    }
 }
 
 /* Fin Partie Restaurants*/
