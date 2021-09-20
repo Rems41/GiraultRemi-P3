@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
+$color-primary:#9356DC;
+$color-secondary:#ff79DA;
+$color-tertiary: #99E2D0;
+
 body{
     font-family: Roboto, sans-sérif;
-    margin: 0;
-    max-width: 1440px;
+    margin: auto;
 }
 
-h1, h2, {
-    font-family: Shrikhand;
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Header*/
@@ -53,156 +59,188 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 1rem;
 
-}
-.exploration h1{
-    margin-bottom: 0;
-}
-.exploration p{
-    margin-bottom: 2rem;
-}
-.btn{
-    color: #fff;
-    background: linear-gradient(0deg, #9356dc, #ff79da);
-    font-size: 1.2rem;
-    text-decoration: none;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2rem;
-    width: 15rem;
-}
-a{
-    text-decoration: none;
-    color: inherit;
+    & > h1{
+        margin-bottom: 0;
+        font-weight: 900;
+        font-size: 3rem;
+    }
+    
+    & p{
+        margin-bottom: 2rem;
+    }
+
+    & .btn{
+        color: #fff;
+        background: linear-gradient(0deg, #9356dc, #ff79da);
+        font-size: 1.2rem;
+        text-decoration: none;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        width: 15rem;
+    }
 }
 
 /* Fin Search Block*/
 
-#functioning{
+#functioning {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 2em 2em 0 2em;
+    padding: 2em 0em ;
     margin-bottom: 2rem;
 }
+    
+    & > h2{
+        width: 100%;
+        color: #000;
+        font-size: 2rem;
+        margin-left: 2.25rem;
+    }
 
-#functioning h2{
-    width: 100%;
-    color: #000;
-    font-size: 30px;
-}
+    & .step-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 
-#functioning a{
-    display: flex;
-    align-items: center;
-    border: 1.2rem;
-    border-radius: 2rem;
-    background-color: #f7f7f7;
-    box-shadow: 0 5px 15px #00000033;
-    cursor: pointer;
-    font-size: 1rem;
-    margin: 1em 0 0 0;
-    padding: 1.5em 5em;
-    transition: all .3s ease-in-out;
-    width: 18%;
-}
+    & a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1.2rem;
+        border-radius: 2rem;
+        background-color: #f7f7f7;
+        box-shadow: 0 5px 15px #00000033;
+        cursor: pointer;
+        font-size: 1rem;
+        margin: 1em 0 0 0;
+        padding: 24px 32px 24px 0;
+        width: 27%;
+        position: relative;
+    }
 
-.functioning-step span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#9356dc;
-    border-radius: 1.2rem;
-    color: #fff;
-    height: 1.5em;
-    padding: .3em;
-    position: relative;
-    right: 6em;
-    width: 1.5em;
-}
+    .functioning-step {
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:#9356dc;
+            border-radius: 1.2rem;
+            color: #fff;
+            height: 1.5em;
+            padding: .3em;
+            position: absolute;
+            right: 6em;
+            left: -1em;
+            width: 1.5em;
+        }
 
-.functioning-step i{
-    padding-right: 1.2rem;
-}
+        i {
+            padding-right: 1.2rem;
+        }
 
-.functioning-step h3{
-    font-weight: 300;
-    text-align: center;
-}
+        h3 {
+            font-weight: 300;
+            text-align: center;
+        }
+
+        & .choice{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    } 
+        
 /* Partie : Restaurant*/
 
 #restaurants{
     background-color: #f6f6f6;
     padding: 1rem 1rem 2rem 0;
 }
-.restaurants-container{
-    max-width: 1280px;
-    margin: auto;
-}
-.title-restaurants{
-    display: block;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-left: 40px;
-}
+
+.restaurants-container {
+        margin: auto;
+    
+    & > h2{
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-left: 2.625rem;
+    } 
+} 
 .cards{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
+    & > a{
+        box-shadow: 0 5px 15px #00000033;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin: 1em 0;
+        max-width: 45%;
+        position: relative;
+        transition: all .3s ease-in-out;
+        width: 100%;
+    
+        & > .card-img{
+            height: 12rem;
+            width: 100%;
+            border: 0 solid transparent;
+            border-radius: 1rem 1rem 0 0;
+            box-shadow: none;
+            object-fit: cover;
+        }
+    
+        & > .new-card{
+            background-color: #99e2d0;
+            color: #1b6150;
+            padding: .5rem;
+            position: absolute;
+            top: 1rem;
+            right: .75rem;
+        }
+    }
 }
-.card{
-    box-shadow: 0 5px 15px #00000033;
-    border-radius: 1rem;
-    overflow: hidden;
-    margin: 1em 0;
-    max-width: 45%;
-    position: relative;
-    transition: all .3s ease-in-out;
-    width: 100%;
-}
-.card-img{
-    height: 12rem;
-    width: 100%;
-    border: 0 solid transparent;
-    border-radius: 1rem 1rem 0 0;
-    box-shadow: none;
-    object-fit: cover;
-}
-.new-card{
-    background-color: #99e2d0;
-    color: #1b6150;
-    padding: .5rem;
-    position: absolute;
-    top: 1rem;
-    right: .75rem;
-}
+/* Partie : Restaurant infos*/
+
 .restaurant-info{
     padding: 1rem;
     position: relative;
     display: flex;
     align-items: center;
-}
-.card-content{
-    flex: 1;
-}
-.card-title{
-    margin: 0 0 .25rem;
-}
-.card-district{
-    margin: 0;
-}
-.card-heart{
-    height: 2rem;
-    width: 2rem;
-    border: 0 solid transparent;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
+
+    & .card-content{
+        flex: 1; 
+
+        & .card-title{
+            margin: 0 0 .25rem;
+        }
+
+        & .card-district{
+            margin: 0;
+        }
+    }
+
+    & .card-heart{
+        height: 2rem;
+        width: 2rem;
+        border: 0 solid transparent;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+    }   
 }
 
 /* Fin Partie Restaurants*/
@@ -218,24 +256,26 @@ a{
     padding: 2em;
     color: #fff;
     font-size: 1.3em;
-}
 
-.footer-logo img{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    scroll-behavior: smooth;
-    color: #fff;
-}
+    & > .footer-logo {
+        font-family: Shrikhand ;
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+        scroll-behavior: smooth;
+        color: #fff;
+    }
 
-.footer-link{
-    color: #fff;
-    height: 1.5em;
-}
+    & a{
+        color: #fff;
+        height: 1.5em;
 
-.footer-link i{
-    margin-right: .5em;
+        & i{
+            margin-right: .5em;
+        }
+    } 
 }
+/* Fin Footer*/
 
 /* Pages restaurants (4)*/
 
@@ -263,7 +303,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     color: #000;
 }
 
@@ -273,7 +313,7 @@ a{
     position: relative;
     z-index: 1;
     border-radius: 2rem 2rem 0 0;
-    margin: -2rem auto 4rem auto;
+    margin: -2rem auto 0rem auto;
 }
 
 .menu_top{
@@ -296,6 +336,7 @@ a{
     height: 2rem;
     width: 2rem;
     border: 0 solid transparent;
+    font-size: 1.7rem;
 }
 
 .submenus{
