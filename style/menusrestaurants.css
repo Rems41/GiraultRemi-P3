@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* Pages restaurants (4)*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+body {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -37,9 +41,9 @@ a {
 .header--backhome i {
   position: absolute;
   left: 2rem;
+  top: 1.8rem;
   height: 2rem;
   width: 2rem;
-  top: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,6 +55,12 @@ a {
           align-items: center;
   font-size: 1.2rem;
   color: #000;
+}
+
+@media screen and (max-width: 375px) {
+  .header--backhome i {
+    left: 1rem;
+  }
 }
 
 /* Début du main*/
@@ -76,7 +86,7 @@ a {
   padding: 1rem 2rem 0 1rem;
 }
 
-.menu_top h2 {
+.menu_top > h2 {
   font-family: Shrikhand;
 }
 
@@ -234,6 +244,36 @@ a {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1220px) {
+  .submenus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .submenu {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .submenu {
+    width: 100%;
+  }
+  .submenu .submenu_title {
+    margin-left: 1rem;
+  }
+}
+
 /* Début Footer*/
 .footer {
   display: -webkit-box;
@@ -269,6 +309,30 @@ a {
 
 .footer a i {
   margin-right: .5em;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer > .footer-logo {
+    padding-bottom: 1.5rem;
+  }
+  .footer a {
+    padding-bottom: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+    padding-left: 1rem;
+  }
 }
 
 /* Fin Footer*/

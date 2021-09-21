@@ -1,6 +1,10 @@
 /* Pages restaurants (4)*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
+body{
+    margin: 0;
+}
+
 a{
     text-decoration: none;
     color: inherit;
@@ -34,14 +38,20 @@ $color-tertiary: #99E2D0;
 .header--backhome i{
     position: absolute;
     left: 2rem;
+    top: 1.8rem;
     height: 2rem;
     width: 2rem;
-    top: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
     color: #000;
+}
+
+@media screen and (max-width:375px) {
+    .header--backhome i{
+        left: 1rem;
+    }
 }
 
 /* Début du main*/
@@ -61,7 +71,7 @@ $color-tertiary: #99E2D0;
     align-items: center;
     padding: 1rem 2rem 0 1rem;
 
-    & h2{
+    & > h2{
         font-family: Shrikhand;
     }
 
@@ -180,6 +190,27 @@ $color-tertiary: #99E2D0;
     }
 }
 
+@media screen and (max-width:1220px) {
+    .submenus{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .submenu{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .submenu{
+        width: 100%;
+    }
+    .submenu .submenu_title{
+        margin-left: 1rem;
+    }
+}
+
 /* Début Footer*/
 
 .footer{
@@ -210,4 +241,24 @@ $color-tertiary: #99E2D0;
         }
     } 
 }
+
+@media screen and (max-width:1000px) {
+    .footer{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .footer > .footer-logo{
+      padding-bottom: 1.5rem;
+    }
+    .footer a{
+      padding-bottom: 0.6rem;
+    }
+  }
+  
+  @media screen and (max-width:375px) {
+    .footer{
+      padding-left: 1rem;
+    }
+  }
+
 /* Fin Footer*/
