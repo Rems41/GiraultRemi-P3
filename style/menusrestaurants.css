@@ -1,6 +1,8 @@
 @charset "UTF-8";
-/* Pages restaurants (4)*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* Palette de couleurs*/
+/* Mixins*/
 body {
   margin: 0;
 }
@@ -10,6 +12,7 @@ a {
   color: inherit;
 }
 
+/* Header*/
 .header--backhome {
   position: relative;
 }
@@ -63,6 +66,7 @@ a {
   }
 }
 
+/* Fin Header*/
 /* Début du main*/
 .menu_container {
   max-width: 1280px;
@@ -131,9 +135,11 @@ a {
   padding-bottom: .5rem;
   font-weight: 400;
   text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+  width: 3rem;
 }
 
-.entry-1, .entry-2, .entry-3, .entry-4, .flat-1, .flat-2, .flat-3, .dessert-1, .dessert-2, .dessert-3 {
+.meal {
   background-color: #fff;
   padding: 1rem;
   display: -webkit-box;
@@ -148,7 +154,7 @@ a {
   max-width: 100%;
 }
 
-.entry_info, .flat_info, .dessert_info {
+.meal_info {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -204,8 +210,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 100px;
   background-color: #fff;
   height: 1.6rem;
