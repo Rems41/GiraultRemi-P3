@@ -43,6 +43,7 @@ $color-tertiary: #99E2D0;
 
 body{
     margin: 0;
+    font-family: Roboto, sans-sérif;
 }
 
 a{
@@ -108,6 +109,7 @@ a{
 
     & > h2{
         font-family: Shrikhand;
+        font-weight: 500
     }
 
     & .menu_btn{
@@ -131,7 +133,7 @@ a{
 }
 
 .submenu{
-    max-width: 100%;
+    max-width: 90%;
     overflow: hidden;
     padding: 0 1rem;
 
@@ -155,7 +157,54 @@ a{
     overflow: hidden;
     cursor: pointer;
     max-width: 100%;
+    animation: grow 0.6s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
 }
+
+
+.delay-0{
+    animation-delay: 0s;
+}
+.delay-1{
+    animation-delay: 0.1s;
+}
+.delay-2{
+    animation-delay: 0.2s;
+}
+.delay-3{
+    animation-delay: 0.3s;
+}
+.delay-4{
+    animation-delay: 0.4s;
+}
+.delay-5{
+    animation-delay: 0.5s;
+}
+.delay-6{
+    animation-delay: 0.6s;
+}
+.delay-7{
+    animation-delay: 0.7s;
+}
+.delay-8{
+    animation-delay: 0.8s;
+}
+.delay-9{
+    animation-delay: 0.9s;
+}
+
+
+@keyframes grow {
+    0%{
+      transform: scale(0);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+
 
 .meal_info {
         white-space: nowrap;
@@ -165,15 +214,17 @@ a{
         font-size: 1.1rem;
 }
 
-.entry_title, .flat_title, .dessert_title{
+.meal_title {
     margin: 0;
 }
 
-.entry_accompaniement, .flat_accompaniement, .dessert_accompaniement{
+.meal_accompaniement {
     margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-.entry_price, .flat_price, .dessert_price{
+.meal_price {
     display: flex;
     font-weight: 700;
     justify-content: flex-end;
@@ -181,7 +232,7 @@ a{
     padding-left: .5rem;
 }
 
-.entry_confirmation, .flat_confirmation, .dessert_confirmation{
+.meal_confirmation {
     @include FlexCenter;
     background-color:#99e2d0;
     margin: -1rem -5rem -1rem 1rem;
@@ -189,15 +240,26 @@ a{
     transition-duration: .6s;
 }
 
-.entry_icon, .flat_icon, .dessert_icon{
+.meal:hover .meal_confirmation{
+    margin-right: -1rem
+}
+
+.meal_icon {
     @include FlexCenter;
     border-radius: 100px;
     background-color: #fff;
     height: 1.6rem;
     width: 1.6rem;
+    transform: rotate(360deg);
+    transition-duration: 0.6s;
+    
 }
 
-.entry_icon i, .flat_icon i, .dessert_icon i{
+.meal:hover .meal_icon{
+    transform: rotate(0);
+}
+
+.meal_icon i {
     color: #99e2d0;
 }
 
@@ -213,9 +275,13 @@ a{
         border-radius: 100px;
         color: #fff;
         background-color: #686868;
-        box-shadow: .25rem .25rem 10px;
         background-image: linear-gradient(0deg, rgba(77, 36, 128, 0.9), rgba(255, 121, 218, .9));
         cursor: pointer;
+        box-shadow: 3px 3px 3px #e0dfdf;
+
+        &:hover{
+            filter: brightness(1.2);
+        }
     }
 }
 

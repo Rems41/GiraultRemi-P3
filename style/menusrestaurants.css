@@ -5,6 +5,7 @@
 /* Mixins*/
 body {
   margin: 0;
+  font-family: Roboto, sans-sérif;
 }
 
 a {
@@ -92,6 +93,7 @@ a {
 
 .menu_top > h2 {
   font-family: Shrikhand;
+  font-weight: 500;
 }
 
 .menu_top .menu_btn {
@@ -125,7 +127,7 @@ a {
 }
 
 .submenu {
-  max-width: 100%;
+  max-width: 90%;
   overflow: hidden;
   padding: 0 1rem;
 }
@@ -152,6 +154,84 @@ a {
   overflow: hidden;
   cursor: pointer;
   max-width: 100%;
+  -webkit-animation: grow 0.6s;
+          animation: grow 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.delay-0 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.delay-1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.delay-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.delay-3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delay-4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delay-5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay-6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.delay-7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.delay-8 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.delay-9 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .meal_info {
@@ -164,15 +244,17 @@ a {
   font-size: 1.1rem;
 }
 
-.entry_title, .flat_title, .dessert_title {
+.meal_title {
   margin: 0;
 }
 
-.entry_accompaniement, .flat_accompaniement, .dessert_accompaniement {
+.meal_accompaniement {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.entry_price, .flat_price, .dessert_price {
+.meal_price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,7 +268,7 @@ a {
   padding-left: .5rem;
 }
 
-.entry_confirmation, .flat_confirmation, .dessert_confirmation {
+.meal_confirmation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,7 +285,11 @@ a {
           transition-duration: .6s;
 }
 
-.entry_icon, .flat_icon, .dessert_icon {
+.meal:hover .meal_confirmation {
+  margin-right: -1rem;
+}
+
+.meal_icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,9 +303,18 @@ a {
   background-color: #fff;
   height: 1.6rem;
   width: 1.6rem;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
 }
 
-.entry_icon i, .flat_icon i, .dessert_icon i {
+.meal:hover .meal_icon {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.meal_icon i {
   color: #99e2d0;
 }
 
@@ -244,11 +339,16 @@ a {
   border-radius: 100px;
   color: #fff;
   background-color: #686868;
-  -webkit-box-shadow: .25rem .25rem 10px;
-          box-shadow: .25rem .25rem 10px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(77, 36, 128, 0.9)), to(rgba(255, 121, 218, 0.9)));
   background-image: linear-gradient(0deg, rgba(77, 36, 128, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
+  -webkit-box-shadow: 3px 3px 3px #e0dfdf;
+          box-shadow: 3px 3px 3px #e0dfdf;
+}
+
+.menu_command .commandbtn:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
 }
 
 @media screen and (max-width: 1220px) {
