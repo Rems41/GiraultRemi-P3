@@ -1,294 +1,466 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 /* Palette de couleurs*/
 
-$color-primary:#9356DC;
-$color-secondary:#ff79DA;
-$color-tertiary: #99E2D0;
-$color-heart:linear-gradient( $color-primary , $color-secondary);
-
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-heart: linear-gradient($color-primary, $color-secondary);
 
 /* Mixins*/
 
 @mixin FlexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin FlexColumn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin FlexAround {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @mixin FlexEvenly {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-
-body{
-    font-family: Roboto, sans-sérif;
-    margin: auto;
+body {
+  font-family: Roboto, sans-sérif;
+  margin: auto;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.loader{
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeout ;
+  animation-delay: 4s;
+  animation-fill-mode: both;
+}
+
+.load{
+  display: flex;
+}
+.letter{
+  color: $color-primary;
+  font-family: Shrikhand;
+  font-size: 40px;
+  animation: flash 1.4s linear infinite ;
+  
+}
+.letter:nth-child(1){
+  animation-delay: 0.1s;
+}
+.letter:nth-child(2){
+  animation-delay: 0.2s;
+}
+.letter:nth-child(3){
+  animation-delay: 0.3s;
+}
+.letter:nth-child(4){
+  animation-delay: 0.4s;
+}
+.letter:nth-child(5){
+  animation-delay: 0.5s;
+}
+.letter:nth-child(6){
+  animation-delay: 0.6s;
+}
+.letter:nth-child(7){
+  animation-delay: 0.7s;
+}
+.letter:nth-child(8){
+  animation-delay: 0.8s;
+}
+
+@keyframes flash{
+  0%{
+    color: $color-primary;
+    text-shadow: none;
+  }
+  90%{
+    color: #9356dc;
+    text-shadow: none;
+  }
+  100%{
+    color: #FFF900;
+    text-shadow: 0 0 7px #FFF900, 0 0 50px #FF6C00;
+  }
+}
+@keyframes fadeout {
+  100%{
+    opacity: 0;
+    z-index: -99;
+  }
 }
 
 /* Header*/
 
-header{
-    @include FlexCenter;
-    height: 4rem;
+header {
+  @include FlexCenter;
+  height: 4rem;
 }
 
 /* Fin Header*/
 
 /* Search Block*/
 
-.location input{
-    background-color: #e6e6e6;
-    border: none;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bolder;
-    width: 9rem;
-    padding-left: 0.6rem;
+.location input {
+  background-color: #e6e6e6;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bolder;
+  width: 9rem;
+  padding-left: 0.6rem;
 }
-#search-block{
-    @include FlexColumn;
+#search-block {
+  @include FlexColumn;
 }
-.location{
-    @include FlexCenter;
+.location {
+  @include FlexCenter;
+  height: 3rem;
+  background-color: #e6e6e6;
+  width: 100%;
+  border-top: 0.3rem solid #dadada;
+}
+.exploration {
+  background-color: #f2f2f2;
+  width: 100%;
+  @include FlexColumn;
+  padding-bottom: 4rem;
+
+  & > h1 {
+    margin-bottom: 0;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+
+  & p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  & .btn {
+    color: #fff;
+    background: linear-gradient(0deg, $color-primary, $color-secondary);
+    font-size: 1.2rem;
+    text-decoration: none;
     height: 3rem;
-    background-color: #e6e6e6;
-    width: 100%;
-    border-top: 0.3rem solid #dadada;
+    @include FlexCenter;
+    border-radius: 2rem;
+    width: 15rem;
+
+    &:hover {
+      filter: brightness(1.2);
+      box-shadow: 3px 3px 3px #adacac;
+    }
+  }
 }
-.exploration{
-    background-color: #f2f2f2;
-    width: 100%;
-    @include FlexColumn;
-    padding-bottom: 4rem;
 
-    & > h1{
-        margin-bottom: 0;
-        font-weight: 900;
-        font-size: 2rem;
-    }
-    
-    & p{
-        margin-bottom: 2rem;
-        font-size: 1.2rem;
-        font-weight: 100;
-    }
-
-    & .btn{
-        color: #fff;
-        background: linear-gradient(0deg, $color-primary, $color-secondary);
-        font-size: 1.2rem;
-        text-decoration: none;
-        height: 3rem;
-        @include FlexCenter;
-        border-radius: 2rem;
-        width: 15rem;
-    }
+@media screen and (max-width:630px){
+  .exploration h1{
+    text-align: center;
+  }
+  .exploration p{
+    text-align: center;
+  }
 }
 
 /* Fin Search Block*/
 
 #functioning {
-    @include FlexAround;
-    flex-wrap: wrap;
-    padding: 2em 0em ;
-    margin-bottom: 2rem;
+  @include FlexAround;
+  flex-wrap: wrap;
+  padding: 2em 0em;
+  margin-bottom: 2rem;
+
+  & > h2 {
+    width: 100%;
+    color: #000;
+    font-size: 2rem;
+    margin-left: 2.25rem;
+  }
+
+  & .step-container {
+    @include FlexEvenly;
+    width: 100%;
+    margin-left: 1.8rem;
+    margin-right: 1.5rem;
+  }
+
+  & a {
+    @include FlexCenter;
+    border: 1.2rem;
+    border-radius: 1.5rem;
+    background-color: #f7f7f7;
+    box-shadow: 0 5px 15px #00000033;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1em 0 0 0;
+    padding: 24px 32px 24px 0;
+    width: 27%;
+    position: relative;
+    height: 1.5rem;
+
+    &:hover{
+      background-color: #e6d6f8
+    }
+  }
+
+  .functioning-step {
+    span {
+      @include FlexCenter;
+      background-color: $color-primary;
+      border-radius: 1.2rem;
+      color: #fff;
+      height: 1.5em;
+      padding: 0.3em;
+      position: absolute;
+      right: 6em;
+      left: -1em;
+      width: 1.5em;
+    }
+
+    i {
+      padding-right: 1.2rem;
+      color: #7e7e7e;
+    }
+
+    .ico-resto {
+      padding-left: 15px;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    & .choice {
+      @include FlexCenter;
+      margin-left: -1.5rem;
+    }
+  }
 }
-    
-    & > h2{
-        width: 100%;
-        color: #000;
-        font-size: 2rem;
-        margin-left: 2.25rem;
-    }
+@media screen and (max-width:1072px){
+  .step-container{
+    flex-direction: column;
+  }
+  #functioning a{
+    width: 90%;
+    max-width: 450px;
+  }
+}
 
-    & .step-container {
-        @include FlexEvenly;
-        width: 100%;
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-
-    & a{
-        @include FlexCenter;
-        border: 1.2rem;
-        border-radius: 2rem;
-        background-color: #f7f7f7;
-        box-shadow: 0 5px 15px #00000033;
-        cursor: pointer;
-        font-size: 1rem;
-        margin: 1em 0 0 0;
-        padding: 24px 32px 24px 0;
-        width: 27%;
-        position: relative;
-        height: 2rem
-    }
-
-    .functioning-step {
-        span {
-            @include FlexCenter;
-            background-color: $color-primary;
-            border-radius: 1.2rem;
-            color: #fff;
-            height: 1.5em;
-            padding: .3em;
-            position: absolute;
-            right: 6em;
-            left: -1em;
-            width: 1.5em;
-        }
-
-        i {
-            padding-right: 1.2rem;
-            color: #7E7E7E;
-        }
-
-        h3 {
-            font-weight: 500;
-            font-size: 1rem;
-            text-align: center;
-        }
-
-        & .choice{
-            @include FlexCenter;
-        }
-    } 
-        
+@media screen and (max-width:800px){
+  #functioning > h2{
+    margin-left: 1rem;
+  }
+}
 /* Partie : Restaurant*/
 
-#restaurants{
-    background-color: #f6f6f6;
-    padding: 1rem 0 2rem 0;
+#restaurants {
+  background-color: #f6f6f6;
+  padding: 1rem 0 2rem 0;
 }
 
 .restaurants-container {
-        margin: auto;
-    
-    & > h2{
-        display: block;
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 3rem 0 1rem 1rem
-    } 
-} 
-.cards{
-    @include FlexEvenly;
-    flex-wrap: wrap;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  margin: auto;
 
+  & > h2 {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 3rem 0 1rem 1rem;
+  }
+}
+.cards {
+  @include FlexEvenly;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-    & > a{
-        box-shadow: 0 5px 15px #00000033;
-        border-radius: 1rem;
-        overflow: hidden;
-        margin: 1em 0;
-        max-width: 45%;
-        position: relative;
-        width: 100%;
-        
+  & > a {
+    box-shadow: 0 5px 15px #00000033;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 1em 0;
+    max-width: 45%;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+
+    & > .card-img {
+    height: 12rem;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
     }
-        
-    
-        & > .card-img{
-            height: 12rem;
-            width: 100%;
-            border: 0 solid transparent;
-            border-radius: 1rem 1rem 0 0;
-            box-shadow: none;
-            object-fit: cover;
-        
-    
-        & > .new-card{
-            background-color: #99e2d0;
-            color: #1b6150;
-            padding: .5rem;
-            position: absolute;
-            top: 1rem;
-            right: .75rem;
-        }
+
+    & > .new-card {
+      background-color: #99e2d0;
+      color: #1b6150;
+      padding: 0.5rem;
+      position: absolute;
+      top: 1rem;
+      right: 0.75rem;
     }
+  }
 }
 /* Partie : Restaurant infos*/
 
-.restaurant-info{
-    padding: 0.6rem 1rem;
-    position: relative;
-   @include FlexCenter;
+.restaurant-info {
+  padding: 0.6rem 1rem;
+  position: relative;
+  @include FlexCenter;
 
-    & .card-content{
-        flex: 1; 
+  & .card-content {
+    flex: 1;
 
-        & .card-title{
-            margin: 0 0 .25rem;
-        }
-
-        & .card-district{
-            margin: 0;
-        }
+    & .card-title {
+      margin: 0 0 0.25rem;
     }
 
-    & .card-heart{
-        height: 2rem;
-        width: 2rem;
-        border: 0 solid transparent;
-        padding: 0;
-        @include FlexCenter;
-        cursor: pointer;
-        position: relative; 
+    & .card-district {
+      margin: 0;
     }
+  }
+
+  & .card-heart {
+    height: 2rem;
+    width: 2rem;
+    border: 0 solid transparent;
+    padding: 0;
+    @include FlexCenter;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    box-sizing: border-box;
+
+    & .fa-heart{
+      position: absolute;
+      font-size: 2rem;
+      color: grey;
+    }
+    
+    & .fa-gradient{
+      width: 2rem;
+      height: 3rem;
+    }
+    & .fa-gradient:hover{
+      cursor: pointer;
+      font-weight: bold;
+      -moz-animation: backgroundheart 1s;
+      -webkit-animation: backgroundheart 1s;
+      animation: backgroundheart 1s;
+      background: linear-gradient(#9356dc, #fa79da);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@keyframes backgroundheart{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .cards{
+    flex-direction: column;
+  }
+  .cards > a{
+    max-width: none;
+    width: 100%;
+  }
 }
 
 /* Fin Partie Restaurants*/
 
 /* Début Footer*/
 
-.footer{
-    @include FlexAround;
-    background-color: #353535;
-    flex-wrap: wrap;
-    padding: 2em;
+.footer {
+  @include FlexAround;
+  background-color: #353535;
+  flex-wrap: wrap;
+  padding: 2em;
+  color: #fff;
+  font-size: 1.3em;
+
+  & > .footer-logo {
+    font-family: Shrikhand;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
     color: #fff;
-    font-size: 1.3em;
+  }
 
-    & > .footer-logo {
-        font-family: Shrikhand ;
-        margin: 0;
-        padding: 0;
-        box-sizing: inherit;
-        scroll-behavior: smooth;
-        color: #fff;
-    }
+  & a {
+    color: #fff;
+    height: 1.5em;
+  }
+}
 
-    & a{
-        color: #fff;
-        height: 1.5em;
-
-        & i{
-            margin-right: .5em;
-        }
-    } 
+.fa-utensils::before {
+  margin-right: 8px;
 }
 /* Fin Footer*/
 
+
+@media screen and (max-width:1000px) {
+  .footer{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer > .footer-logo{
+    padding-bottom: 1.5rem;
+  }
+  .footer a{
+    padding-bottom: 0.6rem;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .footer{
+    padding-left: 1rem;
+  }
+}
